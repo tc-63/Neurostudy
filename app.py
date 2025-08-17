@@ -7,7 +7,7 @@ from prompts import (
     SYSTEM_SEARCH, SYSTEM_FLASHCARDS, SYSTEM_MCQS, SYSTEM_OSCE, SYSTEM_NOTEBOOK,
     FLASHCARD_FORMAT, MCQ_FORMAT
 )
-from app.utils import ensure_chroma, pdf_to_text, chunk_text, add_docs, search, join_context
+from utils import ensure_chroma, pdf_to_text, chunk_text, add_docs, search, join_context
 
 st.set_page_config(page_title="NeuroStudy", page_icon="🧠")
 st.title("NeuroStudy — education-only")
