@@ -7,7 +7,7 @@ from prompts import (
     SYSTEM_SEARCH, SYSTEM_FLASHCARDS, SYSTEM_MCQS, SYSTEM_OSCE, SYSTEM_NOTEBOOK,
     FLASHCARD_FORMAT, MCQ_FORMAT
 )
-from utils import ensure_chroma, pdf_to_text, chunk_text, add_docs, search, join_context
+from utils import pdf_to_text, chunk_text, add_docs, search, join_context
 
 st.set_page_config(page_title="NeuroStudy", page_icon="🧠")
 st.title("NeuroStudy — education-only")
@@ -15,9 +15,6 @@ st.title("NeuroStudy — education-only")
 api_key = st.sidebar.text_input("OpenAI API Key", type="password")
 model = st.sidebar.selectbox("Model", ["gpt-4o-mini","gpt-4o"])
 client = OpenAI(api_key=api_key) if api_key else None
-
-persist_dir = os.path.join(os.path.dirname(__file__), "..", "data", "chroma")
-_, coll = ensure_chroma(persist_dir)
 
 st.header("Library")
 files = st.file_uploader("Upload PDFs/TXTs", type=["pdf","txt"], accept_multiple_files=True)
