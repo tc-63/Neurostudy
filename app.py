@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 from openai import OpenAI
 
-from app.prompts import (
+from prompts import (
     SYSTEM_SEARCH, SYSTEM_FLASHCARDS, SYSTEM_MCQS, SYSTEM_OSCE, SYSTEM_NOTEBOOK,
     FLASHCARD_FORMAT, MCQ_FORMAT
 )
